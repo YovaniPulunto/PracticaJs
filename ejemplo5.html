@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+    <ul id="lista"></ul>
+    <script>
+        var obj = { id:1,nombre:"Coca Cola", precio: 1.25, imagenUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ0w5JvehKnS9vhhJD5AoQGxxmCK-JZ3j45g&s" };
+        var productos =[
+            {id:2,nombre:"Margarina Mirasol", precio: 1.75,imagenUrl: "https://www.mirasol.lat/-/media/Project/Upfield/Brands/Rama/Mirasol-ES/Assets/Products/PLEGADIZA-maiz.png?h=3000&iar=0&w=3000&rev=-1" },
+            {id:3,nombre:" Galleta Oreo", precio: 1.25,imagenUrl: "https://w7.pngwing.com/pngs/450/913/png-transparent-oreo-biscuits-white-chocolate-mondelez-international-biscuit-wafer-grocery-store-cocoa-bean.png" },
+            {id:4,nombre:" Papas Fritas", precio: 2.00,imagenUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZzOLE9sgmy8LacLItBPPQ7Ys1qYokVYQ2NA&s" },
+        ];
+
+        productos.push(obj);
+
+        productos.forEach( x =>{
+          var salida =`<li>
+                       <b>id:</b> ${x.id} <br>
+                        <b>Name:</b> ${x.nombre}<br>
+                        <b>Precio:</b> $${x.precio}<br>
+                        <img src="${x.imagenUrl}" height="150"/>
+                       </li>`;
+           document.getElementById('lista').innerHTML += salida;
+        })
+    </script>
+</body>
+</html>
